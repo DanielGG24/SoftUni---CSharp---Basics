@@ -1,0 +1,16 @@
+using System;
+
+namespace _04._Inches_To_Cm
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var inch = double.Parse(Console.ReadLine());
+            var inchValue = 2.54;
+          
+            var InchesToCm = inch*inchValue;
+            Console.WriteLine(InchesToCm);
+        }
+    }
+}  
