@@ -1,0 +1,20 @@
+using System;
+ 
+namespace Radians_to_Degrees
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //четем радиани
+            double radians = double.Parse(Console.ReadLine());
+ 
+            //преобразуваме радиани => градуси 
+            //фармула: градус = радиан * 180 / π  => (π = Math.PI)
+            double degrees = radians * 180 / Math.PI;
+ 
+            //отпечатваме резултата (градусите)
+            Console.WriteLine(degrees);
+        }
+    }
+}
