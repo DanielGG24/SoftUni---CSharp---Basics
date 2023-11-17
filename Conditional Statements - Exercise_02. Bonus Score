@@ -1,0 +1,43 @@
+using System;
+
+namespace Bonus_Score
+{
+  class Program 
+  { 
+      static void Main(string[] args)
+      {
+          int num = int.Parse(Console.ReadLine());
+         
+          double bonus = 0;
+         
+          if (num <= 100)
+          {
+            //знаем, че num е по-малко от 100
+            bonus = 5;
+          }
+          else if (num > 1000)
+          {
+              //знаем, че num е по-голяма от 1000
+              bonus = num *0.1;
+          }
+          else
+          {
+             //знаем, че num е между 100 и 1000
+             bonus = num * (20 / 100.0);
+          }
+         
+          if(num%2 == 0)
+              bonus = bonus + 1;
+              //bonus+=1;
+        
+          if (num%10 == 5 ) 
+          {
+              bonus = bonus + 2;
+              //bonus+=2;
+          }
+        
+          Console.WriteLine(bonus);
+          Console.WriteLine(num+bonus); 
+      }
+   }
+}   
