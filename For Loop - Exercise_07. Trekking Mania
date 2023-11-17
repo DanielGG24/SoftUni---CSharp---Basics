@@ -1,0 +1,72 @@
+using System;
+ 
+namespace While_Loop___Exercise
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // от конзолата броя на групите и колко хора е всяка група
+            int n = int.Parse(Console.ReadLine());
+ 
+            double group1Percent = 0;
+            double group2Percent = 0;
+            double group3Percent = 0;
+            double group4Percent = 0;
+            double group5Percent = 0;
+ 
+            // групи туристи според броя
+            int peak1 = 0;
+            int peak2 = 0;
+            int peak3 = 0;
+            int peak4 = 0;
+            int peak5 = 0;
+ 
+            for (int i = 1; i <= n; i++) // проверка брой хора
+            {
+                int num = int.Parse(Console.ReadLine()); // взимаме от конзолата брой хора
+ 
+                if (num <= 5) // разпределяме в групи по броя
+                {
+                    //   group1 = num;
+                    peak1 += num;
+                }
+                else if (num >= 6 && num <= 12)
+                {
+                    //    group2 = num;
+                    peak2 += num;
+                }
+                else if (num >= 13 && num <= 25)
+                {
+                    //    group3 = num;
+                    peak3 += num;
+                }
+                else if (num >= 26 && num <= 40)
+                {
+                    //    group4 = num;
+                    peak4 += num;
+                }
+                else if (num > 40)
+                {
+                    //    group5 = num;
+                    peak5 += num;
+                }
+ 
+            }
+ 
+            int totalPersons = peak1 + peak2 + peak3 + peak4 + peak5;
+ 
+            group1Percent =1.0* peak1 / totalPersons * 100;   // изчисляваме процента за всяка група 
+            group2Percent =1.0* peak2 / totalPersons * 100;
+            group3Percent =1.0* peak3 / totalPersons * 100;
+            group4Percent =1.0* peak4 / totalPersons * 100;
+            group5Percent =1.0* peak5 / totalPersons * 100;
+ 
+            Console.WriteLine($"{group1Percent:f2}%"); // печатаме резултат в конзолата 
+            Console.WriteLine($"{group2Percent:f2}%");
+            Console.WriteLine($"{group3Percent:f2}%");
+            Console.WriteLine($"{group4Percent:f2}%");
+            Console.WriteLine($"{group5Percent:f2}%");
+        }
+    }
+}
