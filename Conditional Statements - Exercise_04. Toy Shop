@@ -1,0 +1,33 @@
+using System;
+ 
+namespace _4taZadacha
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double ekPrice = double.Parse(Console.ReadLine());
+            int puzelNum = int.Parse(Console.ReadLine());
+            int gowKukliNum = int.Parse(Console.ReadLine());
+            int mechetaNum = int.Parse(Console.ReadLine());
+            int minionNum = int.Parse(Console.ReadLine());
+            int kamioniNum = int.Parse(Console.ReadLine());
+            double igrachkiSum = puzelNum * 2.60 + gowKukliNum * 3 + mechetaNum * 4.10 + minionNum * 8.20 + kamioniNum * 2;
+            int broiIgrachki = puzelNum + gowKukliNum + mechetaNum + minionNum + kamioniNum;
+            if (broiIgrachki > 50)
+            {
+                igrachkiSum = igrachkiSum - igrachkiSum * 0.25;
+            }
+            igrachkiSum = igrachkiSum - igrachkiSum * 0.10;
+            
+            if(igrachkiSum >= ekPrice)
+            {
+                Console.WriteLine($"Yes! {(igrachkiSum - ekPrice):F2} lv left.");
+            }
+            else
+            {
+                Console.WriteLine($"Not enough money! {ekPrice - igrachkiSum:F2} lv needed.");
+            }
+        }
+    }
+}
