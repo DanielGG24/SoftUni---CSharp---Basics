@@ -1,0 +1,19 @@
+using System;
+ 
+namespace First_Steps_In_Coding
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //четем от конзолата usd
+            double usd = double.Parse(Console.ReadLine());
+ 
+            //преобразуваме bgn = usd*1.79549; 
+            double bgn = usd * 1.79549;
+ 
+            //изписваме на конзолата bgn
+            Console.WriteLine(bgn+" ");
+        }
+    }
+}
