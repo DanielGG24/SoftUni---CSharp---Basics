@@ -1,0 +1,46 @@
+using System;
+ 
+namespace _08_Tennis_Ranklist
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int numOfTournaments = int.Parse(Console.ReadLine());
+            string tournaments = " ";
+ 
+            double finalPoints = 0;
+            double pointF = 0;
+            double pointSF = 0;
+            double Counter = 0;
+ 
+             int numPointsRang = int.Parse(Console.ReadLine());
+            for(int i =1; i <= numOfTournaments; i++)
+            {
+                tournaments = Console.ReadLine();
+           
+                if(tournaments == "F")
+                {
+                    pointF += 1200;
+                }
+                else if(tournaments == "SF")
+                {
+                    pointSF += 720;
+                }
+                else if (tournaments == "W")
+                {
+                    finalPoints = finalPoints + 2000;
+                    Counter++;
+                }
+            }
+            double PointOfTourm = pointF + pointSF + finalPoints;
+            double totalPoints = pointF + pointSF + finalPoints + numPointsRang;
+            double avPoints = PointOfTourm / numOfTournaments;
+            double percentWinTour = Counter / numOfTournaments * 100;
+ 
+            Console.WriteLine($"Final points: {totalPoints}");
+            Console.WriteLine($"Average points: {Math.Floor(avPoints)}");
+            Console.WriteLine($"{percentWinTour:f2}%");
+        }
+    }
+}
