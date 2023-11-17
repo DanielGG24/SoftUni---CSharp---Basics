@@ -1,0 +1,27 @@
+using System;
+ 
+namespace Repainting
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        { 
+ 
+            int sqMplastic=int.Parse(Console.ReadLine());
+            double priceOfplastic = sqMplastic * 1.50;
+            int paintLiters=int.Parse(Console.ReadLine());
+            double priceOfPaint = paintLiters * 14.50;
+            int degradeLiquid=  int.Parse(Console.ReadLine());
+            double priceOfdegradeLiquid = degradeLiquid * 5.00;
+            double additionalMaterialsPrice = ((paintLiters * 0.10) * 14.50) + (2 * 1.50) + 0.40;
+            int hoursToComplete=int.Parse(Console.ReadLine());
+            double sumPriceofMaterials = additionalMaterialsPrice + priceOfPaint + priceOfplastic + priceOfdegradeLiquid;
+            double workPayperHour = 0.30 * sumPriceofMaterials;
+            double totalPay = workPayperHour*hoursToComplete + sumPriceofMaterials;
+ 
+            Console.WriteLine(totalPay);
+ 
+ 
+        }
+    }
+}
