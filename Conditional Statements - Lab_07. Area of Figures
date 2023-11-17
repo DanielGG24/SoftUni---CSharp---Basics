@@ -1,0 +1,42 @@
+using System;
+ 
+namespace _07__Area_of_Figures
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string nameOfFigure = Console.ReadLine();
+            string Square = "square";
+            string Rectangle = "rectangle";
+            string Circle = "circle";
+            string Triangle = "triangle";
+            if(nameOfFigure == Square)
+            {
+                double a = double.Parse(Console.ReadLine());
+                double s = a * a;
+                Console.WriteLine($"{s:F3}");
+            }
+            if(nameOfFigure == Rectangle)
+            {
+                double a = double.Parse(Console.ReadLine());
+                double b = double.Parse(Console.ReadLine());
+                double s = a * b;
+                Console.WriteLine($"{s:F3}");
+            }
+            if(nameOfFigure == Circle)
+            {
+                double r = double.Parse(Console.ReadLine());
+                double s = Math.PI * r * r;
+                Console.WriteLine($"{s:F3}");
+            }
+            if(nameOfFigure == Triangle)
+            {
+                double c = double.Parse(Console.ReadLine());
+                double hc = double.Parse(Console.ReadLine());
+                double s = c * (hc / 2);
+                Console.WriteLine($"{s:F3}");
+            }
+        }
+    }
+}
