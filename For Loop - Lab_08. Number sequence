@@ -1,0 +1,31 @@
+using System;
+ 
+namespace _3_May_2019
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+ 
+            int n = int.Parse(Console.ReadLine());
+            int maxNumb = int.MinValue;
+            int minNumb = int.MaxValue;
+            for (int i = 0; i < n; i++)
+            {
+                int num = int.Parse(Console.ReadLine());
+                if(num>maxNumb)
+                {
+                    maxNumb=num;
+                }
+                if(num<minNumb)
+                {
+                    minNumb=num;
+                }
+ 
+            }
+            Console.WriteLine("Max number: "+maxNumb );
+            Console.WriteLine("Min number: "+minNumb );
+ 
+        }
+    }
+}
